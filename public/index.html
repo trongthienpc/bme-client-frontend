@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&amp;family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/all.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script>
+      (function (w, d) {
+        !(function (a, e, t, r, z) {
+          (a.zarazData = a.zarazData || {}),
+            (a.zarazData.executed = []),
+            (a.zarazData.tracks = []),
+            (a.zaraz = { deferred: [] });
+          var s = e.getElementsByTagName("title")[0];
+          (a.zarazData.c = e.cookie),
+            s && (a.zarazData.t = e.getElementsByTagName("title")[0].text),
+            (a.zarazData.w = a.screen.width),
+            (a.zarazData.h = a.screen.height),
+            (a.zarazData.j = a.innerHeight),
+            (a.zarazData.e = a.innerWidth),
+            (a.zarazData.l = a.location.href),
+            (a.zarazData.r = e.referrer),
+            (a.zarazData.k = a.screen.colorDepth),
+            (a.zarazData.n = e.characterSet),
+            (a.zarazData.o = new Date().getTimezoneOffset()), //
+            (a.dataLayer = a.dataLayer || []),
+            (a.zaraz.track = (e, t) => {
+              for (key in (a.zarazData.tracks.push(e), t))
+                a.zarazData["z_" + key] = t[key];
+            }),
+            (a.zaraz._preSet = []),
+            (a.zaraz.set = (e, t, r) => {
+              (a.zarazData["z_" + e] = t), a.zaraz._preSet.push([e, t, r]);
+            }),
+            a.dataLayer.push({ "zaraz.start": new Date().getTime() }),
+            a.addEventListener("DOMContentLoaded", () => {
+              var t = e.getElementsByTagName(r)[0],
+                z = e.createElement(r);
+              (z.defer = !0),
+                (z.src =
+                  "../../cdn-cgi/zaraz/sd0d9.html?z=" +
+                  btoa(encodeURIComponent(JSON.stringify(a.zarazData)))),
+                t.parentNode.insertBefore(z, t);
+            });
+        })(w, d, 0, "script");
+      })(window, document);
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/tiny-slider.js"></script>
+  <script src="assets/js/glightbox.min.js"></script>
+
+  <script src="assets/js/datepicker.min.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-23581568-13");
+  </script>
+  <script
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+    integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+    data-cf-beacon='{"rayId":"6d28448d9aed3d1e","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}'
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>

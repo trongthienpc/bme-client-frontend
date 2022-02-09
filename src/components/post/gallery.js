@@ -15,11 +15,11 @@ const Gallery = () => {
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 3,
-      slidesToSlide: 2, // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 2,
+      items: 1,
       slidesToSlide: 1, // optional, default to 1.
     },
   };
@@ -29,14 +29,15 @@ const Gallery = () => {
         <div className="container-fluid">
           <div className="row g-3">
             <Carousel
-              swipeable={false}
+              swipeable={true}
               draggable={false}
-              showDots={true}
+              showDots={false}
               responsive={responsive}
               ssr={true} // means to render carousel on server-side.
               infinite={true}
+              autoPlay={true}
               // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-              autoPlaySpeed={1000}
+              autoPlaySpeed={5000}
               keyBoardControl={true}
               customTransition="all .5"
               transitionDuration={500}

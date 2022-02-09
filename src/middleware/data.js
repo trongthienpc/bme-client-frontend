@@ -47,7 +47,7 @@ let services = [
     icon: "fa fa-bicycle",
   },
   {
-    name: "Help &amp; Support",
+    name: "Help & Support",
     icon: "flaticon-reception",
   },
 ];
@@ -129,8 +129,7 @@ let comments = [
     name: "Margaret",
     position: "United Kingdom",
     avatar: "assets/images/avatar-comment.png",
-    comment:
-      "We loved our short stay in this beautiful rural retreat!",
+    comment: "We loved our short stay in this beautiful rural retreat!",
   },
   {
     name: "Veronika",
@@ -144,7 +143,7 @@ let comments = [
     position: "Switzerland",
     avatar: "assets/images/avatar-comment.png",
     comment:
-      "Amazing stay...would book again!Liked · We loved our stay at the Eco Lodge: Amazing staff, relaxed location, great boat trips, free bikes to explore the local village, amazing breakfast."
+      "Amazing stay...would book again!Liked · We loved our stay at the Eco Lodge: Amazing staff, relaxed location, great boat trips, free bikes to explore the local village, amazing breakfast.",
   },
   {
     name: "Bertd",
@@ -152,7 +151,7 @@ let comments = [
     avatar: "assets/images/avatar-comment.png",
     comment:
       "The locstion was grest, the staff unbelievable friendly and helpfull.",
-  }
+  },
 ];
 
 let blogs = [
@@ -299,7 +298,7 @@ let galeries = [
   },
   {
     url: "assets/images/gallery_17/gallery_29.jpg",
-  }
+  },
 ];
 
 export function getRooms() {

@@ -34,8 +34,9 @@ export default class Booking extends Component {
                           href="https://www.booking.com/hotel/vn/binh-minh-eco-lodge-can-tho.html?aid=304142;label=gen173nr-1FCAEoggI46AdIM1gEaPQBiAEBmAExuAEHyAEM2AEB6AEB-AECiAIBqAIDuAL9xIiQBsACAdICJDIzOTg5MTYxLTNmNzUtNDE3YS1hNDJlLTRlMGZmOWExYWI1YtgCBeACAQ;sid=bedbe52d2809ab3f35b72f64d44fda1f;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1644307097;srpvid=77b4380bbe840159;type=total;ucfs=1&#hotelTmpl"
                           target="_blank"
                           rel="noreferrer"
+                          className="btn btn-primary py-3 px-4"
                         >
-                          Booking at booking.com
+                          Book Now
                         </a>
                       </label>
                     </div>

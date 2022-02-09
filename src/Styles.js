@@ -12,11 +12,10 @@ export const Content = styled.div`
 
 export const Button = styled.div`
   position: fixed;
-  width: 100%;
-  left: 95%;
-  bottom: 70px;
+  right: 10px;
+  bottom: 2.8rem;
   height: 20px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   z-index: 1;
   cursor: pointer;
   color: #c5a880;

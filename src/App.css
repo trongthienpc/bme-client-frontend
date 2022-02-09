@@ -52,3 +52,7 @@
 .img-cuisine:after {
   opacity: -3.6;
 }
+
+.booking-form .form-wrap {
+  align-items: center;
+}

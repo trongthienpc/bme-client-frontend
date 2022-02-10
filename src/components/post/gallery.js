@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { getGaleries } from "../../middleware/data";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 const Gallery = () => {
-  let galeries = getGaleries();
+  let galleries = getGaleries();
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -24,7 +24,7 @@ const Gallery = () => {
     },
   };
   return (
-    <div>
+    <div id="gallery">
       <section className="ftco-gallery">
         <div className="container-fluid">
           <div className="row g-3">
@@ -47,7 +47,7 @@ const Gallery = () => {
               dotListClass="custom-dot-list-style"
               itemClass="carousel-item-padding-40-px"
             >
-              {galeries.map((img, index) => (
+              {galleries.map((img, index) => (
                 <div
                   className="col-md"
                   data-aos="fade-up"

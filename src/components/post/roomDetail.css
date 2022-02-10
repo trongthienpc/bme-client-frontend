@@ -1,0 +1,30 @@
+.ftco-section {
+  padding: 1rem 0;
+}
+.react-multi-carousel-track {
+  height: 500px;
+}
+.room-detail-image {
+  height: auto;
+  max-width: 100%;
+  margin: auto;
+  background-size: cover;
+}
+.room-detail-content {
+  padding: 3rem 0;
+}
+
+.room-detail-services {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .room-detail-services {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 12rem;
+  }
+}

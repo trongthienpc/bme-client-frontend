@@ -3,7 +3,13 @@ let rooms = [
     id: 1,
     name: "Double Room with Lake View",
     image: "/assets/images/rooms/double.jpg",
+    images: ["/assets/images/rooms/gallery_22.jpg"],
+    // images: ["/assets/images/rooms/gallery_22.jpg", "/assets/images/rooms/gallery_23.jpg", "/assets/images/rooms/gallery_24.jpg", "/assets/images/rooms/gallery_25.jpg"],
     price: 250,
+    max: 2,
+    size: 25,
+    view: "Lake view",
+    bed: 1,
     description:
       "Suite Room, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
@@ -11,7 +17,12 @@ let rooms = [
     id: 2,
     name: "Queen Room with Garden View",
     image: "/assets/images/rooms/queen.jpg",
+    images: ["/assets/images/rooms/gallery_22.jpg", "/assets/images/rooms/gallery_23.jpg", "/assets/images/rooms/gallery_24.jpg", "/assets/images/rooms/gallery_25.jpg"],
     price: 350,
+    max: 3,
+    size: 40,
+    view: "Garden view",
+    bed: 1,
     description:
       "Family Room, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
@@ -19,10 +30,16 @@ let rooms = [
     id: 3,
     name: "Twin Room with Garden View",
     image: "/assets/images/rooms/twin.jpg",
+    images: ["/assets/images/rooms/gallery_22.jpg", "/assets/images/rooms/gallery_23.jpg", "/assets/images/rooms/gallery_24.jpg", "/assets/images/rooms/gallery_25.jpg"],
     price: 450,
+    max: 4,
+    size: 45,
+    view: "Garden view",
+    bed: 2,
     description:
       "Deluxe Room, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
   },
+
 ];
 
 let services = [
@@ -323,4 +340,8 @@ export function getBlogs() {
 
 export function getGaleries() {
   return galeries;
+}
+
+export function getRoomDetail(id) {
+  return rooms.find(r => r.id === id)
 }

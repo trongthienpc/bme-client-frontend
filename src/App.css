@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+.ftco-section {
+  overflow: hidden;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -36,13 +40,16 @@
     transform: rotate(360deg);
   }
 }
+.ftco-gallery {
+  padding: 3.5rem 0;
+}
 
 .ftco-gallery .gallery-wrap:hover .icon {
   opacity: 0;
 }
 
 .ftco-gallery .gallery-wrap {
-  height: 270px;
+  height: 300px;
 }
 
 .react-multi-carousel-track {
@@ -55,4 +62,75 @@
 
 .booking-form .form-wrap {
   align-items: center;
+}
+
+@media (min-width: 992px) {
+  .modal-lg,
+  .modal-xl {
+    max-width: 800px;
+  }
+  a.nav-link.active {
+    background-color: #c5a880 !important;
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-xl {
+    max-width: 1140px;
+  }
+}
+
+.ftco-navbar-light {
+  position: fixed;
+  top: 0;
+  padding: 1.1rem 0;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+  background-color: transparent !important;
+}
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+  font-size: 1.1rem;
+}
+.shrink {
+  background-color: #222 !important;
+  padding: 0.5rem 0;
+}
+
+a.nav-link {
+  cursor: pointer;
+}
+a.nav-link.active {
+  cursor: pointer;
+  /* animation: flicker 1.5s infinite alternate; */
+}
+
+@media (max-width: 991px) {
+  a.nav-link.active {
+    cursor: pointer;
+    animation: flicker 1.5s infinite alternate;
+  }
+}
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.navbar-brand {
+  z-index: 0;
 }

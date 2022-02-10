@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
+import { Link } from 'react-scroll'
 const Nav = () => {
+  const [scroll, setScroll] = useState(false)
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 10)
+    })
+  }, [])
   return (
     <div>
-      <nav className="navbar navbar-expand-lg  ftco-navbar-light">
+      <nav className={scroll ? "navbar navbar-expand-lg  ftco-navbar-light shrink" : "navbar navbar-expand-lg  ftco-navbar-light"} id="nav">
         <div className="container-xl">
           <NavLink
             className="navbar-brand align-items-center"
@@ -28,59 +35,64 @@ const Nav = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link active" to="index-2.html">
+                <Link
+                  to="#"
+                  className="nav-link"
+                >
                   Home
-                </NavLink>
+                </Link>
               </li>
               <li className="nav-item">
-                <NavHashLink
-                  to="#about"
+                <Link
+                  to="about"
                   className="nav-link"
-                  activeClassName="active"
-                  activeStyle={{ color: "red" }}
+                  activeClass="active"
+                  spy={true} smooth={true} duration={500}
                 >
                   About
-                </NavHashLink>
+                </Link>
               </li>
               <li className="nav-item">
-                <NavHashLink
-                  to="#rooms"
+                <Link
                   className="nav-link"
-                  activeClassName="active"
-                  activeStyle={{ color: "red" }}
+                  activeClass="active"
+                  to="rooms"
+                  spy={true} smooth={true} duration={500}
                 >
                   Rooms
-                </NavHashLink>
+                </Link>
+
               </li>
               <li className="nav-item">
-                <NavHashLink
+                <Link
                   className="nav-link"
-                  activeClassName="active"
-                  activeStyle={{ color: "red" }}
-                  to="#restaurant"
+                  activeClass="active"
+                  to="restaurant"
+                  spy={true} smooth={true} duration={500}
                 >
                   Resto &amp; Bar
-                </NavHashLink>
+                </Link>
               </li>
               <li className="nav-item">
-                <NavHashLink
+                <Link
                   className="nav-link"
-                  activeClassName="active"
-                  activeStyle={{ color: "red" }}
-                  to="#blog"
+                  activeClass="active"
+                  to="blog"
+                  spy={true} smooth={true} duration={500}
                 >
                   Blog
-                </NavHashLink>
+                </Link>
+
               </li>
               <li className="nav-item">
-                <NavHashLink
+                <Link
                   className="nav-link"
-                  activeClassName="active"
-                  activeStyle={{ color: "red" }}
-                  to="#footer"
+                  activeClass="active"
+                  to="gallery"
+                  spy={true} smooth={true} duration={500}
                 >
                   Contact
-                </NavHashLink>
+                </Link>
               </li>
             </ul>
           </div>

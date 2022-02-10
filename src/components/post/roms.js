@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { getRooms } from "../../middleware/data";
-
+import RoomModal from "../modal/roomModal";
 const Roms = () => {
   let rooms = getRooms();
+  const [lgShow, setLgShow] = useState(false);
+  const [roomName, setRoomName] = useState("No choose")
+  const [roomId, setRoomId] = useState()
+  const handleBook = (text, id) => {
+    console.log("name: ", text);
+    setLgShow(true)
+    setRoomName(text);
+    setRoomId(id)
+  }
   return (
     <div id="rooms">
       <section className="ftco-section bg-light">
@@ -35,21 +44,26 @@ const Roms = () => {
                   ></NavLink>
                   <div className="text p-5 text-center">
                     <h3>
-                      <NavLink to="room-single.html">{room.name}</NavLink>
+                      <NavLink to="#" onClick={() => handleBook(room.name, room.id)}>{room.name}</NavLink>
                     </h3>
                     <p>{room.description}</p>
                     <p className="mb-0 mt-2">
                       <span className="me-3 price">
                         ${room.price} <small>/ night</small>
                       </span>
-                      <NavLink to="#" className="btn-custom">
+                      <button to="#" className="btn btn-primary">
                         Book Now
-                      </NavLink>
+                      </button>
                     </p>
+
                   </div>
                 </div>
+
               </div>
+
             ))}
+            <RoomModal lgShow={lgShow} setLgShow={setLgShow} roomName={roomName} roomId={roomId} />
+
           </div>
         </div>
       </section>

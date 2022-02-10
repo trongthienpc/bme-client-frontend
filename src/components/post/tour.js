@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import ReactDOM from 'react-dom'
 import ModalVideo from 'react-modal-video'
 import 'react-modal-video/scss/modal-video.scss';
 
@@ -19,14 +17,14 @@ const Tour = () => {
                             <span className="subheading">Watch our luxurious hotel</span>
                             <h3>Take A Tour</h3>
                             <button className="video-icon glightbox d-flex align-items-center justify-content-center" onClick={() => setOpen(true)}>
-                                <span class="ion-ios-play"></span></button>
+                                <span className="ion-ios-play"></span></button>
                         </div>
                     </div>
                 </div>
             </div>
             <ModalVideo channel='youtube' autoplay={true} isOpen={isOpen} videoId="hAb1lcnB1mw" onClose={() => setOpen(false)} />
-        </section>
-    </div>;
+        </section >
+    </div >;
 
 }
 

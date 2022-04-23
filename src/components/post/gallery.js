@@ -27,7 +27,7 @@ const Gallery = () => {
     <div id="gallery">
       <section className="ftco-gallery">
         <div className="container-fluid">
-          <div className="row g-3">
+          <div className="row g-3" style={{ width: "100%" }}>
             <Carousel
               swipeable={true}
               draggable={false}
